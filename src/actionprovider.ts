@@ -77,11 +77,11 @@ export interface IPackageInstallOperation {
 
 export interface IGitRepoPull {
     repoUri: string; //URL of the branch in git. (must be public) //TODO support private branches later. 
-    branchName: string; //name of the branch ,that is not master
+    branchName?: string; //name of the branch ,that is not master
     runNpmOnBranch?: boolean; //(default yes)  
     removeGitLink?: boolean; //remove .git and .gitignore dirs
     keepFileList?: string[]; //Delete all other files but these
-    copyFiles: ICopyFile;
+    copyFiles?: ICopyFile;
 }
 
 export interface IAction {
@@ -92,9 +92,6 @@ export interface IAction {
     //loosely coupled to Inquirer.js prompts
     prompts: Map<promptName, any>;
     responses: Map<promptName, Answers>;
-
-
-
 
 }
 

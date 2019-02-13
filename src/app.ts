@@ -6,13 +6,17 @@ let testoperation1: IOperation = {
     opId: { id: "Id", name: "foo" }
     , run: {
         manager: managertype.npm,
-        packageName: "s",
-
-    }
+        packageName: "s"
+        }
 };
 Operations.Index.setValue(testoperation1.opId, testoperation1);
 
-
+let testoperation2: IOperation = {
+    opId:{id:"Id2", name:"foo2"},
+    run: {
+        repoUri:""
+    }
+}
 
 
 
