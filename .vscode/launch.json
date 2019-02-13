@@ -1,0 +1,23 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Yeoman",
+            "preLaunchTask": "tsbuild",            
+            "windows": {
+                "outFiles": ["${workspaceFolder}\\generators\\app\\index.js"],
+                "program": "${env:AppData}\\npm\\node_modules\\yo\\lib\\cli.js",
+                "args": ["officeaddin"]
+            },
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "stopOnEntry": false,
+            "sourceMaps": true
+        }       
+    ]
+}

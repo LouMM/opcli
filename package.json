@@ -1,0 +1,37 @@
+{
+  "name": "opcli",
+  "version": "0.0.1",
+  "description": "Office CLI demo",
+  "main": "index.js",
+  "scripts": {
+    "build": "./node_modules/.bin/tsc -p tsconfig.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "officeaddin",
+    "yeoman-generator",
+    "office-addin",
+    "add-in",
+    "outlook",
+    "excel",
+    "word",
+    "powerpoint",
+    "onenote",
+    "project"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "applicationinsights": "^1.1.0",
+    "chalk": "^2.4.2",
+    "ora": "^3.1.0",
+    "simple-git": "^1.107.0",
+    "typescript-collections": "^1.3.2"
+  },
+  "devDependencies": {
+    "@types/chalk": "^2.2.0",
+    "@types/ora": "^3.0.0",
+    "ts-node": "^8.0.2",
+    "typescript": "^3.3.3"
+  }
+}
