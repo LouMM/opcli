@@ -1,26 +1,16 @@
 import ora from 'ora';
 import { Operations, IOperation, managertype } from './actionprovider';
-import { isMainThread } from 'worker_threads';
+import { GitProxy } from './gitoperations';
 
-let testoperation1: IOperation = {
-    opId: { id: "Id", name: "foo" }
-    , run: {
-        manager: managertype.npm,
-        packageName: "s"
-        }
-};
-Operations.Index.setValue(testoperation1.opId, testoperation1);
 
-let testoperation2: IOperation = {
-    opId:{id:"Id2", name:"foo2"},
-    run: {
-        repoUri:""
-    }
+
+
+
+async function DownloadGit() {
+    await GitProxy.clone('https://github.com/OfficeDev/Office-Addin-TaskPane-React.git', './node_modules/@temp/', 'master');
 }
 
-
-
-
+DownloadGit();
 
 
 
